@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" lang="pt-br">
+        <title>Hamburguer</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <section id="cabecalho">
+            <img id="logo" src="logo.jpg" >
+        </section>
+        <h1>Monte seu Sanduíche</h1>
+        <section id="cardapio">
+            <form>
+                <fieldset>
+                    <h1>Escolha seu Pão:</h1>
+                    <br>
+                    <div id="bread">
+                        <label>
+                            <input type="image" class="imagem" src="frances.jpg">
+                                <span> Pão Francês</span>
+                                <span>R$ 3,00</span>
+                            <input type="radio" name="pao" onclick="bread('frances', 3)">
+                        </label>
+                        <label>
+                            <input class="imagem" type="image" src="australiano.jpg">
+                                <span> Pão Australiano</span>
+                                <span>R$ 8,00</span>
+                            <input type="radio" name="pao" onclick="bread('australiano', 8)">
+                        </label>
+                        <label>
+                            <input class="imagem" type="image" src="brioche.jpg">
+                                <span> Pão Brioche</span>
+                                <span>R$ 6,00</span>
+                            <input type="radio" name="pao" onclick="bread('brioche', 6)">
+                        </label>  
+                    </div>                
+                </fieldset>
+                <fieldset>
+                    <h1>Escolha seu Hamburguer:</h1>
+                    <br>
+                    <div id="burguer">
+                        <label>
+                            <input class="imagem" type="image" src="picanha.jpg">
+                                <span> Hamburguer de Picanha</span>
+                                <span>R$ 13,00</span>
+                                <input type="radio" name="bg" onclick="burguer('picanha', 13)">
+                        </label>
+                        <label>
+                            <input class="imagem" type="image" src="costela.jpg">
+                                <span>Hamburguer de Costela</span>
+                                <span>R$ 10,00</span>
+                                <input type="radio" name="bg" onclick="burguer('costela', 10)" >
+                        </label>
+                        <label>
+                            <input class="imagem" type="image" src="vegano.jpg">
+                                <span> Hamburguer Vegano</span>
+                                <span>R$ 12,00</span>
+                                <input type="radio" name="bg" onclick="burguer('vegano', 12)">
+                        </label>
+                     </div>
+                </fieldset>
+                <fieldset>
+                    <h1>Escolha sua Salada:</h1>
+                    <br>
+                    <div id="salad">
+                        <label>
+                            <input class="imagem" name="alface" type="image" src="alface.jpg">
+                                <span>Alface</span>
+                                <span>R$ 1,50</span>
+                                <input type="radio" name="sl" onclick="salad('alface', 1.5)">
+                        </label>
+                        <label>
+                            <input class="imagem" name="tomate" type="image" src="tomate.jpg">
+                                <span>Tomate</span>
+                                <span>R$ 1,50</span>
+                                <input type="radio" name="sl" onclick="salad('tomate', 1.5)">
+                        </label>
+                        <label>
+                            <input class="imagem" name="sem" type="image" src="semsalada.jpg">
+                                <span> Sem Salada</span>
+                                <span>R$ 00,00</span>
+                                <input type="radio" name="sl" onclick="salad('nenhuma', 0)">
+                        </label>
+                     </div>
+                </fieldset>
+                <fieldset id="queijo">
+                    <h1>Escolha o tipo de queijo:</h1>
+                    <div id="cheese">
+                        <label>
+                            <input class="imagem" name="mussarela" type="image" src="mussarela.jpg">
+                                <span>Mussarela</span>
+                                <span>R$ 3,00</span>
+                                <input type="radio" name="qj" onclick="cheese('mussarela', 3)">
+                        </label>
+                        <label>
+                            <input class="imagem" name="prato" type="image" src="prato.jpg">
+                                <span>Prato</span>
+                                <span>R$ 3,00</span>
+                                <input type="radio" name="qj" onclick="cheese('prato', 3)">
+                        </label>
+                        <label>
+                            <input class="imagem" name="cheddar" type="image" src="cheddar.jpg">
+                                <span> Cheddar</span>
+                                <span>R$ 5,00</span>
+                                <input type="radio" name="qj" onclick="cheese('cheddar', 5)" >
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+            <button onclick="conta()">Envie seu pedido</button>
+        </section>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                <th>Produto</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody"></tbody>
+        </table>
+        <script src="hamburguer.js"></script>
+    </body>
+
+</html>
